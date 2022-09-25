@@ -8,7 +8,13 @@
       become: false
       local_action: command whoami
       register: username_on_the_host
+
+    - name: Dir list and write to file
+      shell:
+         " ls -lrt /var/lib/jenkins/workspace/|awk '{print $9}'|sed '/^$/d' > /var/lib/jenkins/workspace/Prince-AnsiblePlaybookExecutionExample/dirlist.txt "
+      register: lsout
+      tags: lsout
       
-    - name: Display the config
-      debug:
-      msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
+    - name: Display the file
+      shell: cat /var/lib/jenkins/workspace/Prince-AnsiblePlaybookExecutionExample/dirlist.txt
+      register: displaylist
