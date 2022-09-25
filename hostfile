@@ -1,4 +1,5 @@
 [targetserver]
 
+localhost
 34.131.125.60
 jenkins-vm
