@@ -5,3 +5,6 @@ localhost
 jenkins-vm
 devserver
 34.131.38.19
+
+[defaults]
+host_key_checking = False
