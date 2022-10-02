@@ -1,5 +1,5 @@
 ---
-- hosts: 34.131.38.19
+- hosts: 10.190.0.6
   tasks:
     - name: print facts
       debug:
