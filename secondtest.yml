@@ -1,0 +1,4 @@
+---
+- hosts: localhost
+  task:
+    - name: This command will change the working directory to somedir/
